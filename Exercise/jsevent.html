@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS events</title>
+</head>
+<body>
+    <!--inline event is passed-->
+    <button id="btn" onclick="onclickbtn()">submit</button>
+    <div onmouseover= "this.style.backgroundcolor = 'black' ">
+        <button id="button">enter here</button>
+    </div>
+
+    <script>
+
+        //with function
+        function onclickbtn() {
+            //alert will give pop for notification
+            alert("form is submitted successfully");
+        }
+
+        //without creating function or with anonymous functionn
+        let btn = document.getElementById("button");
+        btn = addEventListener("click", function(){
+            alert("form is open")
+        })
+
+        btn = addEventListener("mouseout", function(){
+            alert("mouse out is activated")
+        })
+    </script>
+</body>
+</html>
